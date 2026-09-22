@@ -1,2 +1,0 @@
-# NLP-AI-based-text-classification-summarization-system
-This project is a comprehensive NLP system that analyzes Turkish news texts, performs cumulative inference, and collects up-to-date data from the web to provide LLM-powered summaries. Bu proje; Türkçe haber metinlerini analiz eden, birikimli çıkarım yapabilen, web'den güncel veri toplayıp LLM destekli özetler sunan kapsamlı bir NLP sistemidir.
