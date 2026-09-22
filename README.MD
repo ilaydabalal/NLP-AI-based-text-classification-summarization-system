@@ -125,6 +125,3 @@ Sistemi test etmek için kullanabileceğiniz örnek kategoriler:
 * **Magazin:** *Ünlü şarkıcı sosyal medyadan nişan haberini paylaştı.*
 * **Yaşam:** *Sağlıklı beslenme alışkanlıkları için uzman tavsiyeleri açıklandı.*
 
-```
-
-```
