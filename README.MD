@@ -6,23 +6,20 @@ Bu proje; kullanıcının girdiği Türkçe haber metinlerini analiz eden, çokl
 ## Kurulum ve Çalıştırma
 
 1. **Gerekli Kütüphanelerin Yüklenmesi:**
-   ```bash
-   pip install numpy pandas openpyxl requests beautifulsoup4 groq
-
+```bash
+pip install numpy pandas openpyxl requests beautifulsoup4 groq
 ```
 
 2. **Modelin Eğitilmesi (İlk Çalıştırma):**
 Sistemi ilk kez çalıştırmadan önce model dosyası oluşturulmalıdır (bu işlem 5-10 dakika sürebilir ve `metin_model.pkl` dosyasını üretir):
 ```bash
 python model_egitimi.py
-
 ```
 
 
 3. **Programı Başlatma:**
 ```bash
 python app.py
-
 ```
 
 
@@ -38,14 +35,10 @@ python app.py
 * TF-IDF Vectorizer (N-gram desteği ile)
 * Multinomial Naive Bayes ve Gradient Descent tabanlı Logistic Regression
 * Türkçe Tokenizer, Precision/Recall/F1-Score hesaplama ve K-Fold Cross Validation
-
-
 * **API ve Web Entegrasyonları:**
 * **SerpAPI:** Gerçek zamanlı Google arama motoru erişimi
 * **Groq API (`llama-3.3-70b-versatile`):** Akıllı sorgu üretimi ve web içerik özeti
 * **BeautifulSoup4 & Requests:** HTML parsing ve web scraping
-
-
 
 ---
 
