@@ -1,4 +1,3 @@
-İstediğiniz Markdown formatındaki README içeriğini aşağıda bulabilirsiniz. Bu içeriği doğrudan kopyalayarak `README.md` adıyla projenize kaydedebilirsiniz:
 
 ```markdown
 # Türkçe Haber Metni Konu Çıkarım Sistemi - README
@@ -7,7 +6,7 @@ Bu proje; kullanıcının girdiği Türkçe haber metinlerini analiz eden, çokl
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 1. **Gerekli Kütüphanelerin Yüklenmesi:**
    ```bash
@@ -33,7 +32,7 @@ python app.py
 
 ---
 
-## 🛠️ Temel Teknolojiler ve Mimari
+## Temel Teknolojiler ve Mimari
 
 * **Programlama Dili:** Python 3.x
 * **Matematik & Veri:** NumPy (matris işlemleri), Pandas (veri manipülasyonu), Openpyxl (Excel okuma)
@@ -53,7 +52,7 @@ python app.py
 
 ---
 
-## 📊 Sistem Özellikleri
+## Sistem Özellikleri
 
 1. **Metin Sınıflandırma:** Girilen Türkçe metinleri 8 ana kategoride (`ekonomi`, `kültür`, `magazin`, `sağlık`, `siyaset`, `spor`, `teknoloji`, `yaşam`) sınıflandırır.
 2. **Çoklu ve Birikimli Analiz:** Oturum boyunca girilen tüm metinleri hafızada tutarak ortak/genel konuları tespit eder.
@@ -62,7 +61,7 @@ python app.py
 
 ---
 
-## 🧪 Test Cümleleri Örnekleri
+## Test Cümleleri Örnekleri
 
 Sistemi test etmek için kullanabileceğiniz örnek kategoriler:
 
