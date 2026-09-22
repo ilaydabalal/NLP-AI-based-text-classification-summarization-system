@@ -1,68 +1,80 @@
+İstediğiniz Markdown formatındaki README içeriğini aşağıda bulabilirsiniz. Bu içeriği doğrudan kopyalayarak `README.md` adıyla projenize kaydedebilirsiniz:
 
-KURULUM VE TEST REHBERİ
+```markdown
+# Türkçe Haber Metni Konu Çıkarım Sistemi - README
 
-Programı Başlat
+Bu proje; kullanıcının girdiği Türkçe haber metinlerini analiz eden, çoklu girişlerde birikimli çıkarım yapabilen, web'den güncel veri toplayıp LLM destekli özetler sunan kapsamlı bir Doğal Dil İşleme (NLP) sistemidir.
+
+---
+
+## 🚀 Kurulum ve Çalıştırma
+
+1. **Gerekli Kütüphanelerin Yüklenmesi:**
+   ```bash
+   pip install numpy pandas openpyxl requests beautifulsoup4 groq
+
+```
+
+2. **Modelin Eğitilmesi (İlk Çalıştırma):**
+Sistemi ilk kez çalıştırmadan önce model dosyası oluşturulmalıdır (bu işlem 5-10 dakika sürebilir ve `metin_model.pkl` dosyasını üretir):
+```bash
+python model_egitimi.py
+
+```
+
+
+3. **Programı Başlatma:**
+```bash
 python app.py
 
-Gerekli Kütüphaneler
-pip install numpy pandas openpyxl requests beautifulsoup4 groq
-
-Kütüphane Detayları
-| Kütüphane | Versiyon | Kullanım Amacı |
-|-----------|----------|----------------|
-| numpy | ≥1.20.0 | Matris işlemleri, matematiksel hesaplamalar |
-| pandas | ≥1.3.0 | Veri manipülasyonu, CSV/Excel okuma |
-| openpyxl | ≥3.0.0 | Excel (.xlsx) dosyalarını okuma |
-| requests | ≥2.26.0 | HTTP istekleri, API çağrıları |
-| beautifulsoup4 | ≥4.10.0 | HTML parsing, web scraping |
-| groq | ≥0.4.0 | Groq AI API entegrasyonu |
-
-TEST CÜMLELERİ
-Sistemi test etmek için her kategori için 3 örnek cümle:
-
-### 1EKONOMİ
-1. Dolar kuru bugün yeni rekor kırdı ve 34 lirayı aştı.
-2. Merkez Bankası faiz kararını açıkladı, piyasalar olumlu tepki verdi.
-3. Borsa İstanbul yükselişe geçti, yabancı yatırımcı ilgisi arttı.
-
-### 2SPOR
-1. Galatasaray Fenerbahçe derbisinde kritik 3 puanı aldı.
-2. Milli takım Dünya Kupası elemelerinde önemli bir galibiyet elde etti.
-3. Transfer dönemi yaklaşıyor, büyük kulüpler yıldız futbolcu peşinde.
-
-### 3SİYASET
-1. Cumhurbaşkanı yeni reform paketini açıkladı, önemli değişiklikler geliyor.
-2. Meclis bugün kritik yasa tasarısını görüşecek, muhalefet karşı çıkıyor.
-3. Dışişleri Bakanı komşu ülkeyle ikili görüşmeler yaptı.
-
-### 4TEKNOLOJİ
-1. Yapay zeka destekli yeni akıllı telefon modeli tanıtıldı.
-2. Siber güvenlik uzmanları yeni bir fidye yazılımı tehdidi konusunda uyardı.
-3. Elektrikli araç şarj istasyonları yaygınlaşıyor, altyapı güçleniyor.
-
-### 5SAĞLIK
-1. Sağlık Bakanlığı yeni aşı kampanyasını başlattı, randevu sistemi aktif.
-2. Kalp hastalıklarında erken teşhis için yeni tarama yöntemi geliştirildi.
-3. Grip sezonu başladı, uzmanlar aşı olmayı tavsiye ediyor.
-
-### 6KÜLTÜR
-1. Ulusal sinema festivalinde en iyi film ödülü yerli yapıma gitti.
-2. Dünyaca ünlü müze Türkiye'de sergi açıyor, tarihi eserler gelecek.
-3. Ünlü yazar yeni romanını çıkardı, çok satanlar listesinde zirveye yerleşti.
-
-### 7MAGAZİN
-1. Ünlü şarkıcı sosyal medyadan nişan haberini paylaştı.
-2. Dizi setinde kavga çıktı, iki oyuncu arasında gerginlik yaşandı.
-3. Popüler sunucu yeni bir televizyon programına imza attı.
-
-### 8YAŞAM
-1. Sağlıklı beslenme alışkanlıkları için uzman tavsiyeleri açıklandı.
-2. Evde verimli çalışma için 10 pratik öneri uzmanlardan geldi.
-3. Baharda çiçek yetiştirmek isteyenler için püf noktaları paylaşıldı.
+```
 
 
-ÖNEMLİ NOT
 
-**Model Dosyası**: İlk çalıştırmada `model_egitimi.py` mutlaka çalıştırılmalı
-   - Bu işlem 5-10 dakika sürebilir
-   - `metin_model.pkl` dosyası oluşturulacak
+---
+
+## 🛠️ Temel Teknolojiler ve Mimari
+
+* **Programlama Dili:** Python 3.x
+* **Matematik & Veri:** NumPy (matris işlemleri), Pandas (veri manipülasyonu), Openpyxl (Excel okuma)
+* **Veritabanı:** SQLite3 (Analizlerin ve web verilerinin saklanması)
+* **Özel NLP / ML Algoritmaları (Sıfırdan Implementasyon):**
+* TF-IDF Vectorizer (N-gram desteği ile)
+* Multinomial Naive Bayes ve Gradient Descent tabanlı Logistic Regression
+* Türkçe Tokenizer, Precision/Recall/F1-Score hesaplama ve K-Fold Cross Validation
+
+
+* **API ve Web Entegrasyonları:**
+* **SerpAPI:** Gerçek zamanlı Google arama motoru erişimi
+* **Groq API (`llama-3.3-70b-versatile`):** Akıllı sorgu üretimi ve web içerik özeti
+* **BeautifulSoup4 & Requests:** HTML parsing ve web scraping
+
+
+
+---
+
+## 📊 Sistem Özellikleri
+
+1. **Metin Sınıflandırma:** Girilen Türkçe metinleri 8 ana kategoride (`ekonomi`, `kültür`, `magazin`, `sağlık`, `siyaset`, `spor`, `teknoloji`, `yaşam`) sınıflandırır.
+2. **Çoklu ve Birikimli Analiz:** Oturum boyunca girilen tüm metinleri hafızada tutarak ortak/genel konuları tespit eder.
+3. **Web Arama ve AI Özetleme:** Sohbetin genel konusuna göre web üzerinden güncel veriler toplar ve Groq LLM ile sentezler.
+4. **Yüksek Başarım:** Kaggle veri setleri (7allV03.csv, news.xls, TurkishHeadlines.csv) ile eğitilmiş model üzerinde **%85+ Test Doğruluğu** sunar.
+
+---
+
+## 🧪 Test Cümleleri Örnekleri
+
+Sistemi test etmek için kullanabileceğiniz örnek kategoriler:
+
+* **Ekonomi:** *Dolar kuru bugün yeni rekor kırdı ve 34 lirayı aştı.*
+* **Spor:** *Galatasaray Fenerbahçe derbisinde kritik 3 puanı aldı.*
+* **Siyaset:** *Cumhurbaşkanı yeni reform paketini açıkladı, önemli değişiklikler geliyor.*
+* **Teknoloji:** *Yapay zeka destekli yeni akıllı telefon modeli tanıtıldı.*
+* **Sağlık:** *Sağlık Bakanlığı yeni aşı kampanyasını başlattı, randevu sistemi aktif.*
+* **Kültür:** *Ulusal sinema festivalinde en iyi film ödülü yerli yapıma gitti.*
+* **Magazin:** *Ünlü şarkıcı sosyal medyadan nişan haberini paylaştı.*
+* **Yaşam:** *Sağlıklı beslenme alışkanlıkları için uzman tavsiyeleri açıklandı.*
+
+```
+
+```
