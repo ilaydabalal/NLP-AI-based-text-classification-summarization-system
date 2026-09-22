@@ -1,3 +1,64 @@
+# Turkish News Text Topic Extraction System
+
+This project is a comprehensive Natural Language Processing (NLP) system that analyzes Turkish news text entered by the user, performs cumulative inferences across multiple text inputs, collects up-to-date information from the web, and provides LLM-backed summaries.
+
+## Installation and Execution
+
+1. **Install Required Libraries:**
+```bash
+pip install numpy pandas openpyxl requests beautifulsoup4 groq
+```
+
+2. **Train the Model (First Run):**
+Before running the system for the first time, the model file must be generated (this process may take 5-10 minutes and will produce the `metin_model.pkl` file):
+```bash
+python model_egitimi.py
+```
+
+3. **Start the Program:**
+```bash
+python app.py
+```
+
+---
+
+## Core Technologies and Architecture
+
+* **Programming Language:** Python 3.x
+* **Mathematics & Data:** NumPy (matrix operations), Pandas (data manipulation), Openpyxl (Excel file reading)
+* **Database:** SQLite3 (storing analyses and web data)
+* **Custom NLP / ML Algorithms (Implemented from Scratch):**
+  * TF-IDF Vectorizer (with N-gram support)
+  * Multinomial Naive Bayes and Gradient Descent-based Logistic Regression
+  * Custom Turkish Tokenizer, Precision/Recall/F1-Score calculations, and K-Fold Cross Validation
+* **API and Web Integrations:**
+  * **SerpAPI:** Real-time Google search engine access
+  * **Groq API (`llama-3.3-70b-versatile`):** Intelligent query generation and web content summarization
+  * **BeautifulSoup4 & Requests:** HTML parsing and web scraping
+
+---
+
+## System Features
+
+1. **Text Classification:** Classifies entered Turkish texts into 8 main categories (`ekonomi` [economy], `kültür` [culture], `magazin` [magazine/entertainment], `sağlık` [health], `siyaset` [politics], `spor` [sports], `teknoloji` [technology], `yaşam` [lifestyle]).
+2. **Multiple and Cumulative Analysis:** Retains all entered texts in memory throughout the session to detect common/general topics.
+3. **Web Search and AI Summarization:** Gathers up-to-date data from the web based on the general topic of the conversation and synthesizes it using the Groq LLM.
+4. **High Performance:** Delivers **over 85% Test Accuracy** on models trained with Kaggle datasets (`7allV03.csv`, `news.xls`, `TurkishHeadlines.csv`).
+
+---
+
+## Example Test Sentences
+
+Sample categories you can use to test the system:
+
+* **Economy:** *The exchange rate of the dollar hit a new record today and exceeded 34 liras.*
+* **Sports:** *Galatasaray secured crucial 3 points in the derby against Fenerbahçe.*
+* **Politics:** *The President announced the new reform package, bringing significant changes.*
+* **Technology:** *A new artificial intelligence-powered smartphone model was introduced.*
+* **Health:** *The Ministry of Health launched a new vaccination campaign, and the appointment system is active.*
+* **Culture:** *The best film award at the national film festival went to a domestic production.*
+* **Magazine:** *The famous singer shared the news of their engagement on social media.*
+* **Lifestyle:** *Expert advice on healthy eating habits was published.*
 
 # Türkçe Haber Metni Konu Çıkarım Sistemi
 
