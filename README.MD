@@ -1,10 +1,7 @@
 
-```markdown
 # Türkçe Haber Metni Konu Çıkarım Sistemi - README
 
 Bu proje; kullanıcının girdiği Türkçe haber metinlerini analiz eden, çoklu girişlerde birikimli çıkarım yapabilen, web'den güncel veri toplayıp LLM destekli özetler sunan kapsamlı bir Doğal Dil İşleme (NLP) sistemidir.
-
----
 
 ## Kurulum ve Çalıştırma
 
